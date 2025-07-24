@@ -1,6 +1,6 @@
 {
 	"name": "@anmiles/zod-tools",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Collection of utility functions for zod library",
 	"keywords": [
 		"zod",
