@@ -27,7 +27,9 @@ describe('src/lib/validate', () => {
 				id: 'wrong',
 			};
 
-			expect(() => validate(data, schema)).toThrow('Validation failed: id (Expected number, received string), text (Required)');
+			expect(() => validate(data, schema)).toThrow(`Validation failed:
+	id (Invalid input: expected number, received string)
+	text (Invalid input: expected string, received undefined)`);
 		});
 	});
 });
