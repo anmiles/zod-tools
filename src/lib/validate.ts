@@ -1,7 +1,6 @@
-import type { z } from 'zod';
-import type { $ZodTypeInternals } from 'zod/v4/core';
+import type { Schema } from '../types';
 
-export function validate<T>(data: unknown, schema: z.ZodType<T, any, $ZodTypeInternals<T, unknown>>): T {
+export function validate<T>(data: unknown, schema: Schema<T>): T {
 	const parsed = schema.safeParse(data);
 
 	if (!parsed.success) {
